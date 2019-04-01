@@ -1,0 +1,5 @@
+prelude: |-
+  hash = { a: 1, b: 2, c: 3 }
+benchmark:
+  keys_each: hash.keys.each(&:to_s)
+  each_key: hash.each_key(&:to_s)
