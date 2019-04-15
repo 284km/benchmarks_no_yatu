@@ -1,0 +1,5 @@
+prelude: |-
+  str = " a  b   c    "
+benchmark:
+  string: str.split(" ")
+  regexp: str.split(/ /)
