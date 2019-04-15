@@ -16,6 +16,8 @@ Comparison:
             each_key:   1820198.7 i/s - 1.32x  slower
 ```
 
+### String#split(string or regexp)
+
 ```
 $ be benchmark-driver string_split_string-regexp.yml --rbenv '2.6.2'
 Warming up --------------------------------------
