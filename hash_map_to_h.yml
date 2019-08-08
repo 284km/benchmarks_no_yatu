@@ -1,0 +1,6 @@
+prelude: |-
+  hash = { "a" => 97, "b" => 98 }
+benchmark:
+  map: hash.to_h {|key, value| [key.upcase, value-32] }
+  to_h: hash.to_h {|key, value| [key.upcase, value-32] }
+  # => {"A"=>65, "B"=>66}

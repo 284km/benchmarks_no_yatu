@@ -31,3 +31,21 @@ Comparison:
               string:   3161117.6 i/s
               regexp:    344448.0 i/s - 9.18x  slower
 ```
+
+### Hash#to_h(to_h or map)
+
+```
+$ be benchmark-driver hash_map_to_h.yml --rbenv '2.6.3'
+Warming up --------------------------------------
+                 map     1.824M i/s -      1.876M times in 1.028789s (548.32ns/i)
+                to_h     1.867M i/s -      1.874M times in 1.003697s (535.52ns/i)
+Calculating -------------------------------------
+                 map     1.831M i/s -      5.471M times in 2.988769s (546.27ns/i)
+                to_h     1.738M i/s -      5.602M times in 3.223170s (575.36ns/i)
+
+Comparison:
+                 map:   1830605.2 i/s
+                to_h:   1738052.6 i/s - 1.05x  slower
+
+bundle exec benchmark-driver hash_map_to_h.yml --rbenv '2.6.3'  10.08s user 0.45s system 91% cpu 11.521 total
+```
